@@ -21,7 +21,8 @@ $habilidades = $_POST['habilidade'] ?? [];
   <meta charset="UTF-8">
   <title>Currículo de <?= htmlspecialchars($nome) ?></title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
+  <link rel="stylesheet" href="css/style.css">
+</head>
     /* Esconde apenas o botão na impressão/PDF */
     @media print {
       button.btn-success {
