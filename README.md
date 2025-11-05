@@ -45,6 +45,7 @@ Acesse no navegador:
 
 http://localhost:8080
 
+Clique na pasta: gerador-curriculo/
 
 Preencha o formulário com suas informações e clique em "Gerar Currículo".
 
