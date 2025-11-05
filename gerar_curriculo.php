@@ -23,6 +23,8 @@ $habilidades = $_POST['habilidade'] ?? [];
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
+  <style>
     /* Esconde apenas o botão na impressão/PDF */
     @media print {
       button.btn-success {
@@ -36,7 +38,12 @@ $habilidades = $_POST['habilidade'] ?? [];
     <h1><?= htmlspecialchars($nome) ?></h1>
     
     <!-- Dados Pessoais -->
-    <p><strong>Data de nascimento:</strong> <?= htmlspecialchars($dataNasc) ?></p>
+    <?php
+    // Converte a data para o formato dd/mm/aaaa
+    $dataFormatada = date("d/m/Y", strtotime($dataNasc));
+    ?>
+    <p><strong>Data de nascimento:</strong> <?= htmlspecialchars($dataFormatada) ?></p>
+
     <p><strong>Idade:</strong> <?= htmlspecialchars($idade) ?> anos</p>
     <?php if($telefone): ?><p><strong>Telefone:</strong> <?= htmlspecialchars($telefone) ?></p><?php endif; ?>
     <?php if($email): ?><p><strong>E-mail:</strong> <?= htmlspecialchars($email) ?></p><?php endif; ?>
